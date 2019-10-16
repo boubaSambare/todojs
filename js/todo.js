@@ -39,11 +39,24 @@ function removeFirst() {
 /* EXERCISE 7: 
    Create a method "getTasksAsArray" which returns (and print to the console) an array containing the tasks as string
 */
-
+function getTasksAsArray(){
+    var taskString =[]
+    var taskItems = document.querySelectorAll('.taskListItem')
+    for (var task of taskItems) taskString.push(task.innerText)
+    console.log(taskString)
+    return taskString
+}
 
 /* EXERCISE 8:
    Create a method "changeTaskBackgroundColor" which takes the color from the color picker ad apply it as background to every list item
 */
+function changeTaskBackgroundColor(){
+    var taskItems = document.querySelectorAll('.taskListItem')
+    var color = document.getElementById('colorPicker').value
+    for (var task of taskItems) {
+        task.style.backgroundColor = color
+    }
+}
 
 /* EXERCISE 9: 
    Create a method "bubbleSort()" which sort the task list alphabetically using the bubble sort algorithm
