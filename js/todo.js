@@ -10,10 +10,12 @@ function addNewTask(){
    var taskText = document.getElementById('newTask')
    var taskList = document.createElement('li')
    taskList.className = 'taskListItem'
-   taskList.innerText = taskText.value;
-   UlElement.appendChild(taskList)
-   taskText.value = ''
-   
+    if (taskText.value !== "") {
+        taskList.innerText = taskText.value;
+        UlElement.appendChild(taskList)
+        taskText.value = ''
+    } 
+
    
 }
 
