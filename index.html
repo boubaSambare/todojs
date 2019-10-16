@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+ASSIGNMENT RULES
+- The solution must be pushed to the repository and be available for the tutors by the end of the day
+- You can ask for tutor's help
+- You can google / use StackOverflow BUT we suggest you to use just the material provided
+- To test the page, just open it with your default browser.
+​
+ASSIGNMENT TOPIC
+You are building a task list site.
+The have a list of tasks and can, at any time, add a new one, delete one or sort the whole bunch of them
+-->
+<html lang="en">
+    <head>
+    <!-- EXERCISE 1:
+    Specify the title, the charset (UTF-8) and the viewport of the page.
+    -->
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/todo.css">
+    <title>Personale Task List</title>
+
+    </head>
+
+    <body>
+       <h1>Welcome to your personal Task List!</h1>
+       <br />
+​
+       <span>You can add any task you like by writing it in the specified field and then press "Add new task"</span><br /><br />
+​
+       <input type="text" id="newTask">
+       <input type="button" value="Add new Task" onclick="addNewTask()">
+       <input type="button" value=" remove last item" onclick="removeLast()">
+       <input type="button" value="remove first item" onclick="removeFirst()">
+​
+       <!-- EXERCISE 3
+        Create a button "Remove Last Task" to trigger the method "removeLast"
+        -->
+        
+         <!-- EXERCISE 5
+        Create a button "Remove First Task" to trigger the method "removeFirst"
+        -->
+       
+       <ul id="myTaskList">
+       </ul>
+​
+        <hr />
+​
+        <input type="color" placeholder="Color" id="colorPicker">
+        <input type="button" value="Change task background" onclick="changeTaskBackgroundColor()" >
+​
+        <hr />
+​
+        <input type="button" value="Sort" onclick="bubblesort()" />
+​
+    <script src="js/todo.js"></script>
+    </body>
+</html>
+
+
+
