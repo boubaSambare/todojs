@@ -70,4 +70,14 @@ function changeTaskBackgroundColor(){
 
 function bubbleSort() {
     //TODO
+    var tasks = getTasksAsArray().sort()
+    var UlElement = document.querySelector('#myTaskList')
+     UlElement.innerHTML = ''
+    for (var task of tasks){
+        var taskList = document.createElement('li')
+        taskList.className = 'taskListItem'
+        taskList.innerText = task
+        UlElement.appendChild(taskList)
+    }
+
 }
